@@ -3,14 +3,23 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width">
-  <title>replit</title>
+  <title>rescues site</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.8.0/dist/leaflet.css"
+   integrity="sha512-hoalWLoI8r4UszCkZ5kL8vayOGVae1oxXe/2A4AO6J9+580uKHDO3JdHb7NzwwzK5xr/Fs0W40kiNHxM9vyTtQ=="
+   crossorigin=""/>
+  
+  <script src="https://unpkg.com/leaflet@1.8.0/dist/leaflet.js"
+   integrity="sha512-BB3hKbKWOc9Ez/TAwyWxNXeoV9c1v6FIeYiBieIWkpLjauysF18NzgR1MBNBXf8/KABdlkX68nAhlwcDFLGPCQ=="
+   crossorigin=""></script>
+
 </head>
 
 <body>
 
   <div class="header">
-    <h1>Cabeçalho</h1>
+    <img src="download.jpg" alt="Imagem refugiados">
   </div>
 
   <div class="topnav">
@@ -19,10 +28,35 @@
     <a href="aed.html">Familias</a>
     <a href="aed.html">Ajuda</a>
     <input type="text" placeholder="Pesquisa">
-    <a href="login.html">Login</a>
-    <a href="aed.html">Cadastro</a>
   </div>
-  
+
+  <div class="row">
+    <div class="leftcolumn">
+      <h3>Informaçõe sobre você(anfitrião):</h3>
+      <div class="textos">
+      Nome completo: <input type="text" name="Nome" id="nome">
+      E-mail: <input type="email" name="e-mail" id="email">
+      Telefone: <input type="text" name="tel" id="tel">
+      Data de Nascimento: <input type="date" name="ddt" id="ddt">
+      Nº de filhos: <input type="number" name="filhos" id="filhos">
+      Endereço: <input type="text" name="endereco" id="endereco">
+      Quartos disponíveis: <input type="number" name="quartos" id="quartos">
+      </div>
+      <button onclick="salvar()">Salvar alterações</button>
+      <button onclick="recuperar()">Recuperar alterações</button>
+      <button onclick="limpar()">Limpar dados</button>
+    </div>
+    <div class="rightcolumn">
+      <div id="map"></div>
+      <h3 id="geo">Minha casa: </h3>
+      <button onclick="localizar()">Local da casa</button>
+    </div>
+  </div>
+
+  <div class="footer">
+    <h4>Telefone: (XX)XXXXX-XXXX</h4>
+    <h4>E-mail: XXXXX@gmail.com</h4>
+  </div>
   <script src="script.js"></script>
 </body>
 

@@ -1,6 +1,6 @@
-html, body {
-  height: 100%;
+html, body{
   width: 100%;
+  height: 100%;
 }
 
 .aed{
@@ -8,6 +8,7 @@ html, body {
   background-color: white;
 }
 
+/* cabeçalho */
 .header {
   background-color: #081b77;
   padding: 50px;
@@ -15,13 +16,21 @@ html, body {
   color: red;
 }
 
-/* Add a black background color to the top navigation bar */
+.header img{
+  width: 100%;
+  height: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+
+/* Barra de navegação */
 .topnav {
   overflow: hidden;
   background-color: #e9e9e9;
 }
 
-/* Style the links inside the navigation bar */
 .topnav a {
   float: left;
   display: block;
@@ -38,13 +47,11 @@ html, body {
   color: black;
 }
 
-/* Style the "active" element to highlight the current page */
 .topnav a.active {
   background-color: #2196F3;
   color: white;
 }
 
-/* Style the search box inside the navigation bar */
 .topnav input[type=text] {
   float: right;
   padding: 6px;
@@ -54,7 +61,6 @@ html, body {
   font-size: 17px;
 }
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
 @media screen and (max-width: 600px) {
   .topnav a, .topnav input[type=text] {
     float: none;
@@ -69,84 +75,70 @@ html, body {
   }
 }
 
-/* tela de login css */
+/* tag body */
 body {
   padding: 0;
   margin: 0;
   background-color: #454d6b;
 }
 
-#login {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+/* Colunas */
+.leftcolumn {
+  float: left;
+  width: 40%;
+  background-color: #efebeb;
+  padding: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
 }
 
-.card {
-  background-color: rgba(19, 19, 19, 0.3);
-  padding: 40px;
-  border-radius: 2px;
-  width:280px;
+.rightcolumn {
+  float: right;
+  width: 40%;
+  background-color: #efebeb;
+  padding: 20px;
+  margin-top: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
 }
 
-.card-header {
-  padding-bottom: 50px;
-  opacity: 0.8;
-  color: #fff;
-}
-
-.card-header::after {
+.row:after {
   content: "";
-  width: 70px;
-  height: 1px;
-  background-color: #fff;
-  display: block;
-  margin-top: -17px;
-  margin-left: -5px;
+  display: table;
+  clear: both;
 }
 
-.card-content label {
-  color: #fff;
-  font-size: 12px;
-  opacity: 0.8;
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
+  }
 }
 
-.card-content-area {
-  display: flex;
-  flex-direction: column;
-  padding:10px 0;
-}
-
-.card-content-area input {
-  margin-top: 10px;
-  padding:0 5px;
-  background-color: transparent;
-  border:none;
-  border-bottom: 1px solid #e1e1e1;
-  outline: none;
-  color: #fff;
-}
-
-.card-footer {
-  display: flex;
-  flex-direction: column;
-}
-
-.card-footer .submit{
+/* inputs */
+.textos input {
   width: 100%;
-  height: 40px;
-  background-color: #a13854;
-  border:none;
-  color:#e1e1e1;
-  margin: 10px 0;
+  padding: 10px 15px;
+  margin: 6px 0;
+  box-sizing: border-box;
 }
 
-.card-footer a {
+/* mapa */
+#map {
+  height: 180px; 
+}
+
+/* botoes */
+button {
+  width: 100%;
+  padding: 10px 15px;
+  margin: 6px 0;
+  box-sizing: border-box;
+}
+
+/* rodape */
+.footer {
+  background-color: #ddd;
   text-align: center;
-  font-size: 12px;
-  opacity: 0.8;
-  color: #fff;
-  text-decoration: none;
+  padding: 10px;
 }
